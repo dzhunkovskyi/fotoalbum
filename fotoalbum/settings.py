@@ -25,12 +25,14 @@ SECRET_KEY = 'z9mgza8#5o@&#khjyouftu-)50c7a_nmbpv@ln34)9@1ao_4h!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ '127.0.0.1', 'localhost',
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'post',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'testovoemulo@gmail.com'
+EMAIL_HOST_PASSWORD = '123password123'
+EMAIL_PORT = 587
